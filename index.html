@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" await></script>
+</head>
+<body>
+    <header>
+        <img id="logo" alt="Logo Encriptador" src="public/img/app-logo.svg"></img>
+    </header>
+    <main>
+        <section id="form">
+            <textarea name="content-input" id="content-input" placeholder="Ingrese el texto aquí" tabindex="0" onkeydown="return /[a-z]/.test(event.key)"></textarea>
+
+            <div class="info-label">
+                <img src="public/img/info-logo.svg" alt="Logo Info" class="info-logo">
+                <p>Solo letras minúsculas y sin acentos.</p>
+            </div>
+
+            <div class="content-actions">
+                <button class="button" type="button" tabindex="1" id="encrypt">Encriptar</button>
+                <button class="button button-secondary" type="button" tabindex="2" id="decrypt">Desencriptar</button>
+            </div>
+        </section>
+        <section id="result-container">
+            <div id="no-result">
+                <img class="image" src="public/img/human.svg" alt="Humano sin encontrar resultados">
+                <div class="text">
+                    <h3>Ningún mensaje fue econtrado.</h3>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+            <div id="result">
+                <p id="content-output"></p>
+                <div class="result-actions">
+                    <button class="button button-secondary" type="button" tabindex="3" id="copy">Copiar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
